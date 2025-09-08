@@ -4,17 +4,18 @@ public class App {
   
    
     public static void main(String[] args) throws Exception {
-      
-    isEven(3);
-    sign(5);
-    describe(-5);
-    order2(5, 2);
-    line(2, 18);
-    table10(1);
-    check("JAVA123");
-    login(new String[]{"bo","d","java123"});
-    average(new int[]{5,10,15});
-    max(new int[]{1,100,3,500,2,120,500});
+    
+    isEven(3); //tehtävä 1
+    sign(5);//tehtävä 2
+    describe(-5);//tehtävä 3
+    order2(5, 2);//tehtävä 4
+    order3(1, 3,5 );//tehtävä 5
+    line(2, 18);//tehtävä 6
+    table10(1);//tehtävä 7
+    check("JAVA123");//tehtävä 8
+    login(new String[]{"bo","d","java123"});//tehtävä 9
+    average(new int[]{5,10,15});//tehtävä 10
+    max(new int[]{1,100,3,500,2,120,500});//tehtävä 10
    
     
 }
@@ -83,12 +84,14 @@ public class App {
         System.out.println(vastaus);
         return null;
     }
+          //int max = Arrays.stream(a).max().getAsInt();
     //tehtävä 5
     static String order3(int a, int b, int c){
         int[] nums = new int[] {a,b,c};
-        for(int i = 0; i<nums.length; i++){
-
-        }
+       int max = Arrays.stream(nums).max().getAsInt();
+       int min = Arrays.stream(nums).min().getAsInt();
+       int mid = a+b+c-min-max;
+       System.out.println(max+ ""+ ", "+mid + ", " +min);
         
         return null;
     }
